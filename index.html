@@ -22,7 +22,7 @@
         var x = 10;
         var y = 20; 
         var z = x + y;
-        document.write(z);   
+        document.write(z + "<br>");   
 
         // object 
         var objectName = {
@@ -31,13 +31,13 @@
             age: 30,
             email: "gazi90@gmai.com",
         }
-        document.write(objectName.phone);
+        document.write(objectName.phone + "<br>");
 
         // array
         var arrayName = [
             'Dhaka', 'Barishal', 'Khulna', 'Patuakhali'
         ]
-        document.write(arrayName);
+        document.write(arrayName + "<br>");
 
 
         // if else
@@ -64,7 +64,7 @@
             document.write("F")
         }
 
-
+        document.write("<br>");
         // Switch case
         let marks=80;
         switch(true) {
@@ -93,7 +93,7 @@
                 document.write("F")
             break;
         }
-
+        document.write("<br> <br>");
         // Loop 
         var i;
         for(i=0; i<10; i=i+1){
@@ -119,7 +119,56 @@
                     break;
                 }
                 document.write(i+"<button >button Name</button>")
-            }
+        }
+
+        document.write("<br> <br> ")
+        // while Loop 
+
+        var n=0;
+        while(n<10){
+            document.write(n+"<button >while loop</button>")
+            n=n+1
+        }
+
+        document.write("<br> <br> ")
+        // Do while Loop 
+
+        var i=0;
+        do{
+            document.write(i+"<button >Do while loop</button>")
+            i=i+1
+        } while(i<10)
+
+        document.write("<br> <br> ")
+
+        // Function 
+
+        function addTow(){
+            var name1=30;
+            var name2=20;
+            var name3=name1+name2;
+            document.write(name3 + "<br>")
+        }
+        addTow()
+
+        function addTowNew(name1, name2){
+
+            var name3=name1+name2;
+            document.write(name3 + "<br>")
+        }
+
+        addTowNew(30,20); 
+
+        function returnFunction (num1, num2){
+            return num1+num2;
+        }
+        var fReturn = returnFunction(10, 5)+20;
+        document.write(fReturn)
+
+        // Object
+
+        var 
+
 
 
     </script>
