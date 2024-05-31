@@ -165,7 +165,7 @@
         var fReturn = returnFunction(10, 5)+20;
         document.write(fReturn);
 
-        document.write("<br>");
+        document.write("<br><hr>");
         // Object
 
         var objectName = {
@@ -175,7 +175,7 @@
         }
         document.write(objectName ['fatherName'])
 
-        document.write("<br>");
+        document.write("<br> <hr>");
         // array 
         var arrayName = [
             "fast name ",
@@ -186,13 +186,20 @@
         ]
         document.write(arrayName [2])
         document.write("<br>");
-        document.write(arrayName)
+        document.write(arrayName);
 
+        document.write("<hr>")
         // array  For Loop
-
         var i;
-        for(){
+        for(i=0; i<arrayName.length; i=i+1){
+            document.write(arrayName [i] + "<br>" )
+        }
 
+        document.write("<hr>")
+        // array  For In Loop
+
+        for(var item in arrayName){
+            document.write(arrayName [item] + "<br>" )
         }
 
     </script>
