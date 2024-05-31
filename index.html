@@ -17,7 +17,6 @@
             line comment
         */
 
-        /*
         // variables 
         var name = "Enamul Firoz";
         var x = 10;
@@ -95,15 +94,32 @@
             break;
         }
 
-        */
+        // Loop 
+        var i;
+        for(i=0; i<10; i=i+1){
 
+            document.write(i+"<button >button Name</button>")
+        }
+
+        document.write("<br> <br> ")
+
+        // Loop Ignore
+        for(i=0; i<10; i=i+1){
+                
+            if(i==5 || i==7){
+                continue;
+            }
+            document.write(i+"<button >button Name</button> <br> <br>")
+        }
         
-
-
-
-
-
-
+        // Loop break
+        for(i=0; i<10; i=i+1){
+                
+                if(i==5 ){
+                    break;
+                }
+                document.write(i+"<button >button Name</button>")
+            }
 
 
     </script>
