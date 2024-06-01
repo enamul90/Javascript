@@ -7,6 +7,7 @@
 </head>
 <body>
     
+    <h1 style="background-color: black; padding: 20px; color: beige; text-align: center;">Foundation</h1>
 
     <script>
         document.write ("Hello javascript <br>");
@@ -94,7 +95,8 @@
             break;
         }
         document.write("<br> <br>");
-        // Loop 
+
+        // For Loop 
         var i;
         for(i=0; i<10; i=i+1){
 
@@ -123,7 +125,6 @@
 
         document.write("<br> <br> ")
         // while Loop 
-
         var n=0;
         while(n<10){
             document.write(n+"<button >while loop</button>")
@@ -132,7 +133,6 @@
 
         document.write("<br> <br> ")
         // Do while Loop 
-
         var i=0;
         do{
             document.write(i+"<button >Do while loop</button>")
@@ -142,7 +142,6 @@
         document.write("<br> <br> ")
 
         // Function 
-
         function addTow(){
             var name1=30;
             var name2=20;
@@ -167,7 +166,6 @@
 
         document.write("<br><hr>");
         // Object
-
         var objectName = {
             name: "Enamul",
             age: 19,
@@ -197,14 +195,12 @@
 
         document.write("<hr>")
         // array  For In Loop
-
         for(var item in arrayName){
             document.write(arrayName [item] + "<br>" )
         }
 
         document.write("<hr>")
         // object  For In Loop
-
         for(var item in objectName){
             document.write(item + "<br>" )
         }
@@ -215,20 +211,87 @@
 
         document.write("<hr>")
         // array concat
-
         var array1 = [ 1,2,3,4,5,6,]
         var array2 = [ "A","B","C","D","E","F",]
         var array3 = array1.concat(array2);
         document.write(array3)
 
-        document.write("<hr> don't Work > convert variable To Array")
+        document.write("<hr>")
         // convert variable To Array
-        var nameTittle = "Md enamul Firoz";
-        var nameArray = Array.form(nameTittle);
-        document.write(nameArray[1])
+        var variableName2 = "Md Enamul Firoz";
+        var variableToArray = Array.from( variableName2);
+        document.write(variableToArray[3]);
 
-        document.write("<br> <hr> Don't Work")
-        // convert Array Filter
+        document.write("<br> <hr>")
+        // Array Filter.
+
+        var arrayFilter = [1,2,3,4,5,6,7,8,9,10];
+        var result = arrayFilter.filter(function(item){
+            return item<=9
+        });
+        document.write(result);
+
+        document.write("<br> <hr>")
+        // Array find
+        var arrayFind = [1,2,3,4,5,6,7,8,9,10];
+        var result = arrayFind.find(function(item){
+            return item<=9
+        });
+        document.write(result);
+
+        document.write("<br> <hr>")
+        // Array findindex
+        var result = arrayFind.findIndex(function(item){
+            return item>9
+        });document.write(result);
+
+        document.write("<br> <hr>")
+        // Array forEach Method
+        arrayFind.forEach(function(item){
+            document.write(item);
+        });
+
+        document.write("<br> <hr>")
+        // Array Includes method
+        var result = arrayFind.includes(10);
+        document.write(result);
+
+        document.write("<br> <hr>")
+        // Array index number method
+        var result = arrayFind.indexOf(10);
+        document.write(result);
+
+        document.write("<br> <hr> <h5>উল্টানোর পর ঠিক করার কোন অপশন আছে কি ?</h5> ")
+        // Array Research method
+        var result = arrayFind.reverse();
+        document.write(result);
+
+        document.write("<br> <hr> <h5>নির্দিষ্ট স্থানে তথ্য যুক্ত করা পসিবল কি ?</h5>")
+        // Array push method নতুন ডেটা যুক্ত করে
+        arrayFind.push(11);
+        arrayFind.push(12);
+        arrayFind.push(13);
+        arrayFind.push(14);
+        document.write(arrayFind);
+
+        document.write("<br> <hr> <h5>নির্দিষ্ট ইনডেক্স থেকে তথ্য মুছে ফেলা পসিবল কি ?</h5>")
+        // Array pop method শেষ ডেটা মুছে ফেলে
+        arrayFind.pop();
+        arrayFind.pop();
+        arrayFind.pop();
+        arrayFind.pop();
+        document.write(arrayFind);
+
+        
+        document.write("<br> <hr>  <h5>প্রবলেম আছে ?</h5>  ")
+        // Array sort method ছোট থেকে বড় সাজানোর চেটে ব্যবহার করা হয়
+        arrayFind.sort();
+        document.write(arrayFind);
+
+        document.write("<br> <hr> ")
+        // Array slice method 
+        var result = arrayFind.slice(0,5);
+        document.write(result);
 
 
 
