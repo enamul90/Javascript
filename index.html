@@ -266,7 +266,7 @@
         var result = arrayFind.reverse();
         document.write(result);
 
-        document.write("<br> <hr> <h5>নির্দিষ্ট স্থানে তথ্য যুক্ত করা পসিবল কি ?</h5>")
+        document.write("<br> <hr> ")
         // Array push method নতুন ডেটা যুক্ত করে
         arrayFind.push(11);
         arrayFind.push(12);
@@ -274,7 +274,7 @@
         arrayFind.push(14);
         document.write(arrayFind);
 
-        document.write("<br> <hr> <h5>নির্দিষ্ট ইনডেক্স থেকে তথ্য মুছে ফেলা পসিবল কি ?</h5>")
+        document.write("<br> <hr> ")
         // Array pop method শেষ ডেটা মুছে ফেলে
         arrayFind.pop();
         arrayFind.pop();
@@ -288,14 +288,111 @@
         arrayFind.sort();
         document.write(arrayFind);
 
-        document.write("<br> <hr> ")
         // Array slice method 
-        var result = arrayFind.slice(0,5);
+        var result = arrayFind.slice(5,8);
         document.write(result);
 
+        document.write("<br> <hr> ")
+        // Array splice method  - Remove
+        let commonArray = [1,2,3,4,5,6,7,8,9,10]
+        commonArray.splice(1,1)
+        document.write(commonArray);
 
+        document.write("<br> <hr> ")
 
+        commonArray.splice(0,5)
+        document.write(commonArray);
 
+        document.write("<br> <hr> ")
+        // Array splice method  - Add
+
+        let addArray = [1,2,3,4,5,6,7,8,9,10]
+        addArray.splice(0,0,22)
+        document.write(addArray)
+
+        // array Done ---------------------------------------Array Done
+
+        // ....................String Start............................
+
+        document.write("<br> <hr> ")
+
+        let global = "Dhaka, Bangladesh";
+        let dhaka = "mother Take";
+
+        // String  - Show specify crecter
+        document.write(
+            global.charAt(2)
+        );
+
+        document.write("<br> <hr> ")
+        // concrete  - Add to String
+        document.write(
+            global.concat(dhaka)
+        );
+
+        document.write("<br> <hr> ")
+        // indexof  - Show crecter position
+        document.write(
+            global.indexOf("a")
+        );
+
+        document.write("<br> <hr> ")
+        // indexof  - Show crecter position
+        document.write(
+            global.lastIndexOf("a")
+        );
+
+        document.write("<br> <hr> ")
+        // Replace  - change text
+        document.write(
+            global.replace("a","-a")
+        );
+
+        document.write("<br> <hr> ")
+        // Substr - Slice this string
+        document.write(
+            global.substr(0,6)
+        );
+        document.write("<hr>")
+        document.write(
+            global.substr(6,)
+        );
+
+        document.write("<br> <hr> ")
+        // Substr - Slice this string
+        document.write(
+            global.substring(0,6)
+        );
+
+        document.write("<br> <hr> ")
+        // uppercase
+        document.write(
+            global.toUpperCase()
+        );
+
+        document.write("<br> <hr> ")
+        // lowercase
+        document.write(
+            global.toLowerCase()
+        );
+
+        document.write("<br> <hr> ")
+        // trim - remove space
+        document.write(
+            global.trim()
+        );
+
+        document.write("<br> <hr> ")
+        // trim - remove space
+        document.write(
+            global.trim()
+        );
+
+        // string funtion Done ---------------------------------------string funtion Done
+
+        // ..............................date Object......................................
+
+        
 
     </script>
 </body>
