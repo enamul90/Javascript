@@ -468,16 +468,52 @@
         // ..............................Number Object..............................
 
         document.write("<br> <hr> ")
-        // Number cake finite
-        let isName = 7.4;
+        // Number cake integer
+        let isName = 7.5;
         document.write(
-            isFinite(isName)
+            Number.isInteger(isName)
         );
 
+        document.write("<br> <hr> ")
+        // Number cake আসিফ নাম্বার সসীম নাম্বার
+        document.write(
+            Number.isFinite(isName)
+        );
+
+        let isName2 = "7.8513564";
+
+        document.write("<br> <hr> ")
+        // Number স্ট্রিংকে floating নাম্বারে কনভার্ট করে 
+        document.write(
+            Number.parseFloat(isName2)
+        );
+
+        document.write("<br> <hr> ")
+        // Number স্ট্রিংকে integer কনভার্ট করে 
+        document.write(
+            Number.parseInt(isName2)
+        );
+
+        let isName3 = 7.8513564;
+
+        document.write("<br> <hr> ")
+        // Dosomick number থেকে নির্দিষ্ট পরিমাণ ভগ্নাংশ সংখ্যা নেওয়ার জন্য ব্যবহার করা হয়
+        document.write(
+            isName3.toFixed(2)
+        );
+
+        document.write("<br> <hr> ")
+        // Dismal number থেকে string এ কনভার্ট করার জন্য ব্যবহার করা
+        document.write(
+            isName3.toString()
+        );
+
+        // Number Object Done ---------------------------------------Number Object Done
+        // ..............................window Object..............................
 
 
 
 
-    </script>
-</body>
+
+    </script> 
 </html>
