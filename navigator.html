@@ -8,16 +8,34 @@
 </head>
 <body>
     
-    <h1 class="bg-light p-5 text-center fw-bold" >Window Object</h1>
+    <h1 class="bg-light p-4 text-center fw-bold" >Navigator Object</h1>
 
 
 
 
     <script>
 
+        let appCodeName = navigator.appCodeName;
+        let appName = navigator.appName;
+        let appVersion = navigator.appVersion;
+        let cookie = navigator.cookieEnabled;
+        let language = navigator.languages;
+        let agent = navigator.userAgent;
+        let platFirm = navigator.platform;
+        let online = navigator.onLine;
+
+        document.write(appCodeName + "<hr>")
+        document.write(appName + "<hr>")
+        document.write(appVersion + "<hr>")
+        document.write(cookie + "<hr>")
+        document.write(language + "<hr>")
+        document.write(agent + "<hr>")
+        document.write(platFirm  + "<hr>")
+        document.write(online + "<hr>")
 
 
 
     </script>
 </body>
 </html>
+
