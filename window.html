@@ -16,10 +16,10 @@
         <h3 class="mb-3">Window Object</h3>
         <div class="button-box pt-3">
             <button onclick="objAlert()" class="btn btn-primary">Alert</button>
-            <button onclick="" class="btn btn-primary">Confirm</button>
-            <button onclick="" class="btn btn-primary">Prompt</button>
-            <button onclick="" class="btn btn-primary">open</button>
-            <button onclick="" class="btn btn-primary">close</button>
+            <button onclick=" objConfirm()" class="btn btn-primary">Confirm</button>
+            <button onclick="objPrompt()" class="btn btn-primary">Prompt</button>
+            <button onclick="objOpen()" class="btn btn-primary">open</button>
+            <button onclick="objClose()" class="btn btn-primary">close</button>
         </div>
 
     </div>
@@ -27,20 +27,38 @@
 
     <script>
     // ..............................window Object..............................
-    document.write("<br> <hr> ")
 
     // Alert দেয়ার জন্য ব্যাবহার করা হয় ।
     function objAlert(){
         alert("Md Hossen is New Web Developer")
     }
 
+    // CONFIRM পারমিশন নেয়ার জন্য ব্যাবহার করা হয় ।
+    function objConfirm(){
+       let winConfirm = confirm("Md Hossen is New Web Developer")
+        document.write(winConfirm);
+    }
 
+    // PROMPT ইনপুট নেয়ার জন্য ব্যবহার হয় ।
+    function objPrompt(){
+       let winPrompt = prompt("Md Hossen is New Web Developer")
+        document.write(winPrompt);
+    }
 
+    // OPEN নতুন ট্যব খোলা যায়।
+    function objOpen(){
+        open();
+    }
 
+    // CLOSE  ট্যব বন্ধ করতে ব্যাবহার হয় ।
+    function objClose(){
+        close();
+    }
 
-
-
-
+    // SET time out  নির্দিষ্ট সময় পরে কাজ সম্পাদন হবে এই ক্ষেত্রে ব্যবহৃত হয় ।
+    setTimeout(function(){
+        alert("md enamul ")
+    },10000)
 
     </script>
 </body>
