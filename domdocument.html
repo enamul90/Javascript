@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="cookieName"></p>
+    <button onclick="demoView()" >cookie</button>
+
+    <p id="dome"></p>
+    <button onclick="demoView()">Domain Name</button>
+
+    <p id="lastEdit"></p>
+    <button onclick="edit()">Last Modified</button>
+
+    <p id="tittle"></p>
+    <button onclick="edit()">Document Tittle</button>
+
+    <p id="url"></p>
+    <button onclick="edit()">View URL</button> <hr>
+
+    <button onclick="change()">Button Replay</button> <hr>
+
+    <button onclick="openWin()">Open new window</button> <hr>
+
+    <button onclick="countEle()">lang count</button> <hr>
+
+    <script>
+
+        function demoView(){
+            let cookieView = document.cookie;
+            document.getElementById('cookieName')[0].innerHTML=cookieView;
+
+            let DomView = document.domain;
+            document.getElementById('dome')[0].innerHTML=DomView;
+        }
+
+        function edit(){
+            let endEdit = document.lastModified;
+            document.getElementById('lastEdit').innerHTML=endEdit;
+
+            let doTittle = document.title;
+            document.getElementById('tittle').innerHTML=doTittle;
+
+            let viewUrl = document.URL;
+            document.getElementById('url').innerHTML=viewUrl;
+        }
+
+        function change(){
+            document.open("text/html","replace");
+            document.write("Md Enamul Firoz");
+            document.close();
+        }
+
+        function openWin(){
+            let w = window.open();
+            w.document.open();
+            w.document.write("new window new text");
+            w.document.close();
+        }
+        
+        function countEle(){
+            let x= document.getElementsByTagName("p");
+            let lent = x.length;
+            alert(lent)
+
+        }
+
+    </script>
+
+</body>
+</html>

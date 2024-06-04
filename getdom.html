@@ -8,13 +8,28 @@
 </head>
 <body>
      <h2 id="idNum1"> </h2>
-
-
-
+    <div class="contetn mt-5">
+        <h1 class="cla5"></h1>
+        <h2 class="cla5"></h2>
+        <h3 class="cla5"></h3>
+        <h4 class="cla5"></h4>
+    </div>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
 
     <script>
         let getHtml = document.getElementById('idNum1');
         getHtml.innerHTML="MD Enamul Hossen (Firoz)"
+
+        let getCla= document.getElementsByClassName('cla5')
+        getCla[0].innerHTML='MD'
+        getCla[1].innerHTML='Enamul'
+        getCla[2].innerHTML='Hossen'
+        getCla[3].innerHTML='(Firoz)'
+
+        let getTag = document.getElementsByTagName('p')
+        getTag[2].innerHTML='dfjh;ljkdklsffdskfklsfjldksjfkljskldfskdfsdfklj'
 
     </script>
 </body>
