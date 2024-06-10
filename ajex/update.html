@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<body>
+    <button 
+    onclick="updateData()" 
+    class="btn btn-primary px-4 m-5"
+    >
+        Update
+    </button>
+
+    <script>
+        async function updateData(){
+            let myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            // product id পরিবর্তন করলে সাথে সাথে product code পরিবর্তন করতে হয় ।
+            let id = "6665eac4a9e9e30ec38d4eb5";
+            let url = "https://crud.teamrabbil.com/api/v1/UpdateProduct/"+id;
+            let raw = JSON.stringify({
+                "ProductName": "Enamul-hossen",
+                "ProductCode": "55v21sssssssssssfffffffxd1313s6",
+                "Img": "ena",
+                "UnitPrice": "12",
+                "Qty": "1",
+                "TotalPrice": "12"
+            });
+
+            let postStyle ={
+                method: "POST",
+                body: raw,
+                headers: myHeaders,
+            }
+
+            let post =await fetch(url,postStyle)
+            let convert = await post.json();
+            console.log(convert);
+        }
+
+    </script>
+
+</body>
+</html>
