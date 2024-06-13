@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        p{
+            margin: 0;
+            padding:0 0 8px 0;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading p-4 px-5 bg-light text-start">
+        <h2 class="">Array :</h2>
+        <div class="container-fluid">
+            <div class="row row-cols-3">
+                <div class="col py-3">
+                    <p>(01) array index </p>   
+                    <p>(02) array  For Loop </p> 
+                    <p>(03) array  For In Loop </p>  
+                    <p>(04) array concat </p>   
+                    <p>(05) Array Form </p> 
+                    <p>(06) Array Filter </p>
+                </div>
+                <div class="col py-3">
+                    <p>(07) Array find </p> 
+                    <p>(08) Array find-index </p>  
+                    <p>(09) Array forEach Method </p>   
+                    <p>(10) Array Includes method </p> 
+                    <p>(11) Array index method </p>  
+                    <p>(12) Array Reverse method </p>
+                </div>
+                <div class="col py-3">
+
+                    <p>(13) Array push method </p> 
+                    <p>(14) Array pop method </p>   
+                    <p>(15) Array sort method </p> 
+                    <p>(16) Array slice method </p>  
+                    <p>(17) Array splice method </p>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.write("<hr>");
+        // (01) array
+        var arrayName = [
+            "fast name ",
+            "Last name",
+            "Email",
+            "Phone number",
+            "address"
+        ]
+        document.write(arrayName [2])
+        document.write(" "+"<b>Show Only index</b>"+"<hr>");
+        document.write(arrayName);
+        document.write(" "+"<b>Show full Array</b>" +"<hr>");
+
+        // (02) array  For Loop
+        for(i=0; i<arrayName.length; i=i+1){
+            document.write("--"+ arrayName [i])
+        }
+        document.write(" "+"<b>show full array from -For Loop</b>" +"<hr>"+"<hr>");
+
+        // (03) array  For In Loop
+        for(var item in arrayName){
+            document.write("--"+ arrayName [item] )
+        }
+        document.write(" "+"<b>show full array from -For in Loop</b>" +"<hr>");
+
+        // (04) array concat
+        var array1 = [ 1,2,3,4,5,6,]
+        var array2 = [ "A","B","C","D","E","F",]
+        var array3 = array1.concat(array2);
+        document.write(array3 )
+        document.write(" " +"<b> -04- দুইটি Array কে যুক্ত করার মেথড । </b>>"+"<hr>");
+
+        // (05) Array Form
+        var variableName2 = "Md Enamul Firoz";
+        var variableToArray = Array.from( variableName2);
+        document.write(variableToArray[3]);
+        document.write(" "+ "<b>-05- String কে Array তে কনভার্ট করার মেথড ।</b>"+"<hr>");
+
+        // (06) Array Filter
+        var arrayFilter = [1,2,3,4,5,6,7,8,9,10];
+        var result = arrayFilter.filter(function(item){
+            return item<=5
+        });
+        document.write(result);
+        document.write( " " + "<b>-06- নির্দিষ্ট পরিমাণ লেন্থ প্রিন্ট করা যায় ।</b>"+"<hr>")
+    
+        // (07) Array Find
+        var arrayFind = [1,2,3,4,5,6,7,8,9,10];
+        var result = arrayFind.find(function(item){
+            return item>8
+        });
+        document.write(result );
+        document.write(" "+"<b> -07- কন্ডিশনে মিলে এমন প্রথম ইনডেক্স রিটার্ন করবে। </b>"+"<hr>")
+        
+        // (08) Array Find - Index
+        var arrayFind = [0,1,2,3,4,5,6,6,7,8,9,10];
+        var result = arrayFind.findIndex(function(item){
+            return item>9
+        });
+        document.write(result);
+        document.write(" "+"<b> -08- কন্ডিশনে মিলে এমন প্রথম সংখ্যার ইনডেক্স নাম্বার দেখাবে । </b>"+"<hr>")
+
+        // (09)  Array forEach Method
+        arrayFind.forEach(function(item){
+            document.write(item + " ");
+        });
+        document.write(" " + "<b> -09- সম্পূর্ণ অ্যারেকের লুপ এর  মতন আলাদা আলাদা ভাবে প্রিন্ট করে। </b> <hr>")
+
+        //(10) Array Includes method
+        var result = arrayFind.includes(11);
+        document.write(result);
+        document.write( " " + "<b> -10- Array এর ভিতর নির্দিষ্ট কোন ভ্যালু আছে কিনা তা চেক করার জন্য Includes method ব্যবহার করা হয়।  </b>"+"<hr>")
+
+        //(11) Array index-Of method
+        var result = arrayFind.indexOf(10);
+        document.write(result);
+        document.write(" " + "<b> -11- Array এর ভিতর নির্দিষ্ট কোন ভ্যালু কত ইনডেক্সে আছে তা চেক করার জন্য Array index-Of method ব্যবহার করা হয়।  </b>"+"<hr>")
+
+        // (12) Array Reverse method
+        var result = arrayFind.reverse();
+        document.write(result );
+        document.write(" " + "<b> -12- Array এর ভিতর ভ্যালু কে উল্টা ভাবে সাজাতে Reverse Method ব্যাবহার করা হয় ।</b>"+"<hr>")
+
+        // (13) Array push method 
+        let arrayPush = [2,5,8,10,22];
+        arrayPush.push(11);
+        arrayPush.push(12);
+        arrayPush.push(13);
+        arrayPush.push(14);
+        arrayPush.push("a");
+        document.write(arrayPush)
+        document.write(" " + "<b> -13- Array এর শেষে নতুন ভেলু যুক্ত করতে Push Method ব্যাবহার করা হয় ।</b>"+"<hr>")
+
+        // (14) Array pop method
+        let arrayPop = [2,5,8,10,22];
+        arrayPop.pop();
+        arrayPop.pop();
+        arrayPop.pop();
+        document.write(arrayPop)
+        document.write(" " + "<b> -14- Array এর শেষের ভেলু মুছে ফেলতে pop Method ব্যাবহার করা হয় ।</b>"+"<hr>")
+
+        // (15) Array sort method
+        let shArray = [50,30,80,10,40];
+        shArray.sort();
+        document.write(shArray)
+        document.write(" " + "<b> -15- Array কে ছোট থেকে বড় সাজাতে  short Method ব্যাবহার করা হয় ।</b>"+"<hr>")
+
+        // (16) Array slice method 
+        let arrSlice = shArray.slice(0,1);
+        document.write(arrSlice)
+        document.write(" " + "<b> -16- Array কে ছোট থেকে বড় সাজাতে  short Method ব্যাবহার করা হয় ।</b>"+"<hr>")
+
+        // (17) Array splice method
+        document.write("<b> -17- Array সাথে কোন ভেলু যুক্ত করতে এবং মুছে ফেলতে  Splice Method ব্যাবহার করা হয় ।</b> <br>")
+        let splArrayRe = [50,30,80,10,40];
+        splArrayRe.splice(2,1);
+        document.write(splArrayRe +"(Remove)" +"<br>")
+
+        let splArrayAdd = [50,30,80,10,40];
+        splArrayAdd.splice(2,0,10);
+        document.write(splArrayAdd +"(Add)")
+        document.write("<hr>")
+
+    </script>
+
+</body>
+</html>
