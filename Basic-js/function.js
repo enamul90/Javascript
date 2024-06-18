@@ -15,3 +15,10 @@ function addTowNew(a, b){
     console.log(c)
 }
 addTowNew(50,20); 
+
+// (03) Function Return
+function returnFunction (num1, num2){
+    return num1+num2;
+}
+var addReturn = returnFunction(10, 5)+20;
+console.log(addReturn)
