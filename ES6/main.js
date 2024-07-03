@@ -6,21 +6,19 @@ console.log("hello Bangladesh");
 
 
 //  02 Spread Operator ( একটি array কে অন্য একটি array এর মধ্য এ্যাসাইন করতে ব্যাবহার করা হয় ।)
-
 let asia = ["bangladesh", "india"];
 let world = [...asia, "bak", "rak","gaa"];
 console.log(world)
 
 
 // 03 push method ( একটি array কে অন্য একটি array এর মধ্য এ্যাসাইন করতে ব্যাবহার করা হয় ।)
-
 const borishal =  ["patuakhali","barishal Shodor","jalokhati"]
 const dhaka =  ["mirpur","uttara","motijil"]
 borishal.push(dhaka)
 console.log(borishal)
 
-// 04 Rest Parameter (Function এর ভিতর আনলিমিটেট ভেলু পুশ করতে ব্যাবহার করা হয় ।)
 
+// 04 Rest Parameter (Function এর ভিতর আনলিমিটেট ভেলু পুশ করতে ব্যাবহার করা হয় ।)
 function Show(...number){
     let sum=0;
     for (let i of number ){
@@ -54,7 +52,6 @@ for(data of location){
 }
 
 // 09 Object
-
 let friends={
     friends1:{
         FriendName:"Saki islam",
@@ -79,8 +76,8 @@ for (let pro in address){
     console.log(address[pro])  // shaw value
 } 
 
-// 11  decision making
 
+// 11  decision making
 const decision =  {
     patuakhali :"paduakhali sodor",
     barishal: "Shodor",
