@@ -29,3 +29,4 @@ function Show(...number){
     console.log(sum)
 }
 Show(1,2,3,5)
+
