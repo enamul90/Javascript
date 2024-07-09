@@ -2,7 +2,7 @@ let fs = require("fs");
 let url = require("http");
 
 let server = url.createServer(function(req, res){
-    if(req.url="/"){
+    if(req.url=="/"){
         fs.readFile('hone.html', function(error, data){
 
             res.writeHead(200,{'content-Type': 'text/html'})
