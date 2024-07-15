@@ -3,10 +3,11 @@ app = express();
 
 
 
-// Simple String Response
 //  Send () Response  body
 //  end () Response  end
 
+
+// Simple String Response  (get)
 app.get('/one', function (req, res){
     res.send('this is Simple String Response - get')
 });
@@ -17,7 +18,7 @@ app.post('/two', function (req, res){
 });
 
 
-// Response Status Code
+// Response Status Code  (post)
 
 app.get('/three', function (req, res){
     res.status(201).end('response body')
