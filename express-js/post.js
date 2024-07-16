@@ -1,5 +1,7 @@
-let express = require('express')
-app = express();
+let express = require('express');
+const bodyParser = require('body-parser');
+let app = express();
+app.use(bodyParser.json());
 
 
 
@@ -24,6 +26,14 @@ app.post('/header', function (req, res){
     res.end(`Your Name : ${fastName} post : ${lastName}`);
 
 });
+
+//  Post application-json
+app.post('/json', function (req, res){
+    let jsonData = req.body;
+    let jsonString = JSON.stringify(jsonData);
+    res.send(jsonString);
+});
+
 
 
 
